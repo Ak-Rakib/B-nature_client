@@ -5,7 +5,7 @@ const Service = () => {
     const [service, setService] = useState([])
 
     useEffect(() => {
-        fetch('Fakedata.json')
+        fetch('http://localhost:5000/review')
             .then(res => res.json())
             .then(data => setService(data))
     }, []);

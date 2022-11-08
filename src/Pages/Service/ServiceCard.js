@@ -8,9 +8,10 @@ const ServiceCard = ({ services }) => {
                 <figure><img src={img} alt="car!" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
+                    <p className='font-bold'>${price}</p>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Learn now!</button>
+                        <button className="btn btn-primary">Details</button>
                     </div>
                 </div>
             </div>
