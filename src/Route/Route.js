@@ -4,6 +4,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import Register from '../Authentication/Register/Register'
 import Blog from "../Pages/Blog/Blog";
+import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 
   const router = createBrowserRouter([
     {
@@ -25,6 +26,11 @@ import Blog from "../Pages/Blog/Blog";
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/serviceDetails',
+                element: <ServiceDetails></ServiceDetails>,
+                loader: () => fetch('http://localhost:5000/review')
             }
         ]
     }
