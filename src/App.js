@@ -4,7 +4,7 @@ import router from './Route/Route';
 
 function App() {
   return (
-    <div className="App">
+    <div data-theme="lofi" className='container'>
        <RouterProvider router={router}></RouterProvider>
     </div>
   );
