@@ -13,8 +13,8 @@ const Service = () => {
 
     return (
         <div>
-            <div className='text-center mt-12'>
-                <h1 className='text-5xl'>Service</h1>
+            <div className='text-center mt-16'>
+                <h1 className='text-5xl font-bold'>Service</h1>
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin <br />
                     literature from 45 BC</p>
             </div>
@@ -26,7 +26,7 @@ const Service = () => {
                     ></ServiceCard>)
                 }
             </div>
-            <div className='text-center  mb-12'>
+            <div className='text-center'>
                 <Link to='/serviceDetails'> <button className="btn btn-outline">See All</button></Link>
             </div>
         </div>

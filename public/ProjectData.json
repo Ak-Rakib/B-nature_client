@@ -1,0 +1,19 @@
+[
+    {
+        "title": "North America",
+        "img": "https://i.ibb.co/Ry6k8s4/download.jpg",
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here"
+    },
+
+    {
+        "title": "Dubai shopping mall",
+        "img": "https://i.ibb.co/CwdF5kp/images.jpg",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here"
+    },
+
+    {
+        "title": "National Zoo",
+        "img": "https://i.ibb.co/j8gQMSz/images.jpg",
+        "description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here"
+    }
+]
