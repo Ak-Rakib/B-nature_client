@@ -5,7 +5,7 @@ import ServiceDetailsCard from './ServiceDetailsCard';
 const ServiceDetails = () => {
     const detailsData = useLoaderData();
     return (
-        <div className='grid gap-5'>
+        <div className='grid gap-5 mb-6 mt-6'>
             {
                 detailsData.map(data => <ServiceDetailsCard
                     key={data._id}

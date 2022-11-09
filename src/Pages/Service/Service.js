@@ -4,7 +4,6 @@ import ServiceCard from './ServiceCard';
 
 const Service = () => {
     const [service, setService] = useState([])
-    console.log(service)
 
     useEffect(() => {
         fetch('http://localhost:5000/review')

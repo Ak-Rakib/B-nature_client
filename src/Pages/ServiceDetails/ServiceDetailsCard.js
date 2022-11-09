@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaWindowClose } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './ServiceDetailsCard.css';
 
 const ServiceDetailsCard = ({ data }) => {
@@ -24,9 +25,9 @@ const ServiceDetailsCard = ({ data }) => {
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
                     <p>${price}</p>
-                    <p>{description}</p>
+                    <p>{description.slice(0, 70)}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Review</button>
+                       <Link to={`/review/${_id}`}> <button className="btn btn-primary">Details</button></Link>
                     </div>
                 </div>
             </div>
