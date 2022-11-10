@@ -8,6 +8,8 @@ import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import CustomerReviewPage from "../Pages/Home/CustomerReviewPage/CustomerReviewPage";
 import ReviewPage from "../Pages/ReviewPage/ReviewPage";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import MyReviews from "../Pages/MyReviews/MyReviews";
+import AddPost from "../Pages/Home/AddPost/AddPost";
 
   const router = createBrowserRouter([
     {
@@ -50,6 +52,14 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
                 path: '/reviewPage/:id',
                 element: <PrivateRoute><ReviewPage></ReviewPage></PrivateRoute>,
                 loader: ({params}) => fetch(`https://b-nature-server-ak-rakib.vercel.app/review/${params.id}`)
+            },
+            {
+                path: '/myReviews',
+                element:<PrivateRoute><MyReviews></MyReviews></PrivateRoute>
+            },
+            {
+                path: '/addPost',
+                element: <PrivateRoute> <AddPost></AddPost> </PrivateRoute>
             }
         ]
     }

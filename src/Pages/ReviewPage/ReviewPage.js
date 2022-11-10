@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import ShowsReview from './ShowsReview';
 
@@ -22,13 +22,15 @@ const ReviewPage = () => {
         const form = event.target;
         const review = form.review.value;
         const name = form.name.value;
+        const email = user?.email || 'unregister'
         const id = _id;
         console.log(review)
 
         const reviews = {
             photoId: id,
             CustomerReview: review,
-            userName: name
+            userName: name,
+            email,
         }
 
         if (user.email) {
@@ -75,12 +77,18 @@ const ReviewPage = () => {
             </div>
             <form onSubmit={reviewHandler}>
                 <div className='mt-20 ml-12'>
-                    <textarea name='review' className="textarea textarea-secondary h-24" placeholder="text your review"></textarea>
+                    <textarea name='review' className="textarea textarea-secondary h-24" placeholder="Type your review"></textarea>
                     <label className='label'>
-                        <input name='name' type="name" placeholder="Type here" className="input input-bordered input-accent w-full max-w-xs" />
+                        <input name='name' type="name" placeholder="Type name" className="input input-bordered input-accent w-full max-w-xs" />
+                    </label>
+                    <label className='label'>
+                        <input type="text" name='email' placeholder="Email" defaultValue={user?.email} readOnly className="input input-bordered input-accent w-full max-w-xs" />
                     </label>
                     <label className='label'>
                         <input className='btn btn-outline' type="submit" value="Submit" />
+                    </label>
+                    <label className='label'>
+                        <Link to='/myReviews'> <input className='btn btn-outline' type="submit" value="My All review" /></Link>
                     </label>
                 </div>
             </form>

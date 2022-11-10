@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
-const ShowsReview = ({ reviews }) => {
+const MyReviewsCard = ({ reviews, deleteReview }) => {
     const { user } = useContext(AuthContext)
-    const { CustomerReview, userName } = reviews;
+    const { userName, CustomerReview, _id } = reviews;
+
     return (
         <tr>
             <th>
-                <label>
-
+                <label> 
                 </label>
             </th>
             <td>
@@ -19,16 +19,7 @@ const ShowsReview = ({ reviews }) => {
                         </div>
                     </div>
                     <div>
-                        <div className="font-bold">
-                            {
-                                user?.email ? 
-                                <>
-                                    {userName}
-                                </>
-                                :
-                                {}
-                            }
-                        </div>
+                        <div className="font-bold">{userName}</div>
                         <div className="text-sm opacity-50">United States</div>
                     </div>
                 </div>
@@ -36,8 +27,15 @@ const ShowsReview = ({ reviews }) => {
             <td>
                 {CustomerReview}
             </td>
+            <td>Purple</td>
+            <th>
+                <button className="btn btn-ghost btn-xs">Edit</button>
+                <button onClick={() => deleteReview(_id)} className="btn btn-ghost btn-xs">Delete</button>
+            </th>
         </tr>
     );
 };
 
-export default ShowsReview;
+export default MyReviewsCard;
+
+

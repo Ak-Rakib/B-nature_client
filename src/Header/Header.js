@@ -46,7 +46,7 @@ const Header = () => {
                                 <span className="badge">New</span>
                             </a>
                         </li>
-                        <li><a>Settings</a></li>
+                        <li> <Link to='/addPost'>Add Post</Link> </li>
                         <li> <Link to='/blog'>Blog</Link> </li>
                     </ul>
                 </div>
