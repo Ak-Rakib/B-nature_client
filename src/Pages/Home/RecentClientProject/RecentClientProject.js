@@ -5,7 +5,7 @@ const RecentClientProject = () => {
     const [project, setProject] = useState([]);
 
     useEffect(() => {
-        fetch('ProjectData.json')
+        fetch('https://b-nature-server-ak-rakib.vercel.app/projects')
             .then(res => res.json())
             .then(data => setProject(data))
     }, []);

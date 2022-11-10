@@ -13,16 +13,19 @@ const AuthProvider = ({children}) => {
 
 
     const manualSignUp = (email, password) => {
+        setLoader(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
 
     const googleSignUp = (provider) => {
+        setLoader(true);
         return signInWithPopup(auth, provider);
     }
 
 
     const logIn = (email, password) => {
+        setLoader(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 

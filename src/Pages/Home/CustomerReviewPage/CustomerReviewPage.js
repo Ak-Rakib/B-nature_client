@@ -1,9 +1,9 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 
 const CustomerReviewPage = () => {
-    const { name, img, price, description } = useLoaderData();
+    const { name, img, price, description, _id } = useLoaderData();
     // console.log(reviewPage)
     return (
         <div className='grid gap-6'>
@@ -14,7 +14,7 @@ const CustomerReviewPage = () => {
                     <p>${price}</p>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Listen</button>
+                        <Link to={`/reviewPage/${_id}`}><button className="btn btn-primary">Review</button></Link>
                     </div>
                 </div>
             </div>
